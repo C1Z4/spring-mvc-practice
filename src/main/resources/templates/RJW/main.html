@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music is my life</title>
+</head>
+<body>
+    <h1>Music is my life</h1>
+    <h2>음악 조회</h2>
+    <form action="selectMusic" method="get">
+        이름: <input type="text" name="title"><br/>
+        작곡가: <input type="text" name="producer"><br/>
+        가수: <input type="text" name="singer"><br/>
+        장르: <input type="text" name="genre"><br/>
+        <button type="submit">조회</button>
+    </form>
+    <h2>음악 등록</h2>
+    <form action="registerMusic" method="post">
+        이름: <input type="text" name="title"><br/>
+        작곡가: <input type="text" name="producer"><br/>
+        가수: <input type="text" name="singer"><br/>
+        장르: <input type="text" name="genre"><br/>
+        <button type="submit">등록</button>
+    </form>
+    <script>
+        const flashMessage = '[[${flashMessage}]]';
+        if(flashMessage) {
+            alert(flashMessage);
+        }
+    </script>
+</body>
+</html>
