@@ -1,4 +1,4 @@
-package com.ohgiraffers.HJH;
+package com.ohgiraffers.springmvcpractice.HJH;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,9 +20,9 @@ public class MusicExceptionController {
     @ExceptionHandler(NullPointerException.class)
     public String nullPointerExceptionHandler(NullPointerException exception) {
 
-        System.out.println("controller 레벨의 exception 처리");
+        System.out.println("null Pointer Exception 처리");
 
-        return "error/exception";
+        return "HJH/error/nullPointer";
     }
 
     @GetMapping("controller-user")
@@ -30,7 +30,7 @@ public class MusicExceptionController {
 
         boolean check = true;
         if(check) {
-            throw new MusicRegistException("당신 같은 사람은 회원으로 받을 수 없습니다.");
+            throw new MusicRegistException("음악 등록이 거절 되었습니다.");
         }
 
         return "/";
@@ -42,7 +42,8 @@ public class MusicExceptionController {
         System.out.println("controller 레벨의 exception 처리");
         model.addAttribute("exception", exception);
 
-        return "error/exception";
+        return "HJH/error/exception";
+
     }
 
 
