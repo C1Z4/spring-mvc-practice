@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>음악 조회하기</h1>
+
+<form action="search" method="post">
+    조회할 음악 이름 : <input type="text" name="title">
+    조회할 작곡가 이름 : <input type="text" name="producer">
+    조회할 가수 이름 : <input type="text" name="singer">
+    조회할 장르
+       <select name="genre">
+           <option value="1">K-POP</option>
+           <option value="2">POP</option>
+           <option value="3">Classic</option>
+           <option value="4">BGM</option>
+       </select><br>
+    <button type="submit">조회</button>
+</form>
+
+<h1>Exception</h1>
+<button onclick="location.href='controller-null'">NullPointerException 테스트</button>
+<br>
+<button onclick="location.href='controller-user'">사용자 정의 Exception 테스트</button>
+
+
+
+</body>
+</html>
