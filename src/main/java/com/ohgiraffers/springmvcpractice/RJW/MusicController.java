@@ -14,9 +14,9 @@ public class MusicController {
 
     // 조회
     @GetMapping("selectMusic")
-    public String selectMusic(@ModelAttribute("music") MusicDTO music) throws MusicSearchException {
+    public String selectMusic(@ModelAttribute("music") MusicDTO music) throws NullPointerException {
         if ("빅뱅".equals(music.getSinger())) {
-            throw new MusicSearchException("해당 가수(" + music.getSinger() + ")는 없습니다...");
+            throw new NullPointerException("해당 가수(" + music.getSinger() + ")는 없습니다...");
         }
         return "RJW/view/result";
     }
