@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h3>음악 조회하기</h3>
+  <form action="forward" method="post">
+    검색할 음악 이름을 입력해주세요 : <input type="text", name="title"><br>
+    검색할 작곡가 이름을 입력해주세요 : <input type="text", name="producer"><br>
+    검색할 가수 이름을 입력해주세요 : <input type="text", name="singer"><br>
+    검색할 장르를 입력해주세요 : <input type="text", name="genre"><br>
+    <input type="submit" value="검색하기">
+  </form>
+
+  <h3>음악 등록하기</h3>
+  <form action="redirect" method="post">
+    등록 음악 이름을 입력해주세요 : <input type="text", name="title"><br>
+    등록 작곡가 이름을 입력해주세요 : <input type="text", name="producer"><br>
+    등록 가수 이름을 입력해주세요 : <input type="text", name="singer"><br>
+    등록할 장르를 입력해주세요 : <input type="text", name="genre"><br>
+    <input type="submit" value="등록하기">
+    <script>
+      let flashMessage = '[[${flashMessage}]]';
+      if (flashMessage) {
+        alert(flashMessage)
+      }
+    </script>
+  </form>
+</body>
+</html>
